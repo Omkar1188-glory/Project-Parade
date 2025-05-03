@@ -1,0 +1,239 @@
+/* Global Styles */
+body {
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #f0f0f0; /* Light text color for contrast */
+    position: relative;
+    min-height: 100vh;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height for the header */
+    padding: 20px; /* Add padding to ensure content doesn't touch the edges */
+}
+
+.profile-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between image and form */
+    max-width: 1200px; /* Increase max-width to accommodate larger content */
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better contrast */
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.profile-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.profile-image-section input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.profile-image-section label.file-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.profile-image-section label.file-upload-label:hover {
+    background-color: #0b7dda;
+}
+
+.profile-form {
+    flex: 1; /* Allow the form to take remaining space */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f0f0f0; /* Light text color for contrast */
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 22px); /* Adjust width to fit within container */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #333; /* Dark background for input fields */
+    color: #f0f0f0; /* Light text color for readability */
+    font-size: 14px; /* Smaller text size */
+}
+
+.form-group input::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4CAF50; /* Green border on focus */
+}
+
+.profile-image-section .social-links {
+    margin-top: 20px;
+    width: 100%; /* Ensure full width of form */
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    color: #fff; /* Text color for buttons */
+}
+
+#edit-btn {
+    background-color: #4CAF50;
+}
+
+#edit-btn:hover {
+    background-color: #45a049;
+}
+
+#save-btn {
+    background-color: #2196F3;
+}
+
+#save-btn:hover {
+    background-color: #0b7dda;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: #e64a19;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.success-message {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.success-message.fade-out {
+    opacity: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.visit-link {
+    background-color: #0073b1; /* LinkedIn Blue */
+    color: white;
+}
+
+.save-link {
+    background-color: #6cc644; /* Green for Save */
+    color: white;
+}
+
+.visit-link:hover {
+    background-color: #005582;
+}
+
+.save-link:hover {
+    background-color: #4a9d23;
+}

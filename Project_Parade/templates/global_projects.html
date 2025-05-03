@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Student Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <a href="{{ url_for('project_pool') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md inline-block text-center">Back</a>
+
+        <h2 class="text-3xl font-bold text-center my-6">Share Your Project with Friends</h2>
+        <button class="bg-green-500 text-white px-4 py-2 rounded-md mb-4" onclick="openUploadPopup()">Upload Your Project</button>
+
+        <h2 class="text-2xl font-semibold text-center mb-4">Global Student Projects</h2>
+        
+        <!-- Projects Table -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700 uppercase text-sm">
+                        <th class="py-3 px-4">Project Title</th>
+                        <th class="py-3 px-4">Uploaded By</th>
+                        <th class="py-3 px-4">College</th>
+                        <th class="py-3 px-4">Upload Date</th>
+                        <th class="py-3 px-4">Files</th>
+                        <th class="py-3 px-4">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="global-projects-list" class="text-gray-600 text-center">
+                    <!-- Sample Projects -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Upload Project Popup -->
+    <div id="uploadProjectPopup" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
+            <span class="absolute top-4 right-4 text-xl cursor-pointer" onclick="closeUploadPopup()">&times;</span>
+            <h2 class="text-2xl font-semibold mb-4">Upload New Project</h2>
+            <input type="text" id="projectTitle" class="w-full p-2 border rounded mb-3" placeholder="Project Title" required>
+            <input type="text" id="uploadedBy" class="w-full p-2 border rounded mb-3" placeholder="Your Name" required>
+            <input type="text" id="college" class="w-full p-2 border rounded mb-3" placeholder="College Name" required>
+            <input type="date" id="uploadDate" class="w-full p-2 border rounded mb-3" required>
+            <input type="file" id="projectFiles" class="w-full p-2 border rounded mb-3" accept=".zip,.rar,.pdf,.docx" multiple required>
+            <div class="flex justify-between">
+                <button class="bg-green-500 text-white px-4 py-2 rounded-md" onclick="uploadProject()">Upload</button>
+                <button class="bg-red-500 text-white px-4 py-2 rounded-md" onclick="closeUploadPopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample Projects (Only ZIP/RAR)
+        let projects = [
+        {
+            title: "Blockchain Supply Chain",
+            uploadedBy: "Harsh Katariya",
+            college: "MIT",
+            uploadDate: "2025-02-20",
+            files: [
+                { name: "Medical Data Extraction.rar", url: "/uploads/Medical Data Extraction.rar" }
+            ]
+        },
+        {
+            title: "AI Chatbot for Students",
+            uploadedBy: "Aarav Sharma",
+            college: "IIT Bombay",
+            uploadDate: "2025-02-18",
+            files: [
+                { name: "Chatbot_Code.rar", url: "/static/projects/Chatbot_Code.rar" }
+            ]
+        }
+    ];
+    
+    
+        // Load Projects into Table
+        function loadProjects() {
+            const projectList = document.getElementById("global-projects-list");
+            projectList.innerHTML = ""; // Clear existing projects
+    
+            projects.forEach((project, index) => {
+                let fileLinks = project.files.map(file => 
+                    `<a href="${encodeURI(file.url)}" class="text-blue-500" download>${file.name}</a>`
+                ).join(", ");
+    
+                let newRow = `
+                    <tr class="border-t">
+                        <td class="py-2 px-4">${project.title}</td>
+                        <td class="py-2 px-4">${project.uploadedBy}</td>
+                        <td class="py-2 px-4">${project.college}</td>
+                        <td class="py-2 px-4">${project.uploadDate}</td>
+                        <td class="py-2 px-4">${fileLinks}</td>
+                        <td class="py-2 px-4">
+                            <button class="bg-blue-500 text-white px-3 py-1 rounded" onclick="downloadAll(${index})">Download All</button>
+                        </td>
+                    </tr>`;
+                
+                projectList.innerHTML += newRow;
+            });
+        }
+    
+        // Open Upload Popup
+        function openUploadPopup() {
+            document.getElementById("uploadProjectPopup").classList.remove("hidden");
+        }
+    
+        // Close Upload Popup
+        function closeUploadPopup() {
+            document.getElementById("uploadProjectPopup").classList.add("hidden");
+        }
+    
+        // Upload New Project
+        function uploadProject() {
+            const title = document.getElementById("projectTitle").value;
+            const uploadedBy = document.getElementById("uploadedBy").value;
+            const college = document.getElementById("college").value;
+            const uploadDate = document.getElementById("uploadDate").value;
+            const files = document.getElementById("projectFiles").files;
+    
+            if (title && uploadedBy && college && uploadDate && files.length > 0) {
+                let uploadedFiles = [];
+                for (let i = 0; i < files.length; i++) {
+                    uploadedFiles.push({
+                        name: files[i].name,
+                        url: "#" // Placeholder, update backend to save files properly
+                    });
+                }
+    
+                projects.push({
+                    title: title,
+                    uploadedBy: uploadedBy,
+                    college: college,
+                    uploadDate: uploadDate,
+                    files: uploadedFiles
+                });
+    
+                loadProjects();
+                closeUploadPopup();
+            } else {
+                alert("Please fill in all fields and upload at least one file.");
+            }
+        }
+    
+        // Download All ZIP/RAR Files for a Project
+        function downloadAll(index) {
+            projects[index].files.forEach(file => {
+                let a = document.createElement("a");
+                a.href = encodeURI(file.url);
+                a.download = file.name;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        }
+    
+        // Load Projects on Page Load
+        document.addEventListener("DOMContentLoaded", loadProjects);
+    </script>
+    
+</body>
+</html>

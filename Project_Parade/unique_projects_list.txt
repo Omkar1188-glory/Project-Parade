@@ -1,0 +1,53 @@
+,project_name
+0,AI-Powered Legal Document Analysis
+1,Self-Driving Car Simulation
+2,Stock Price Prediction
+3,IoT-Based Smart Farming
+4,Reinforcement Learning Agent
+5,Blockchain Voting System
+6,Automated Code Review System
+7,Disease Prediction System
+8,Cybersecurity Threat Detector
+9,Text Summarization Tool
+10,Social Media Sentiment Tracker
+11,Automated Resume Screener
+12,AI-Based Fraud Detection
+13,Image Caption Generator
+14,Face Recognition System
+15,AI Virtual Assistant
+16,AI-Powered Health Diagnosis
+17,Speech Emotion Recognition
+18,AI-Based Music Recommendation
+19,Stock Market Trend Analysis
+20,AI-Based Customer Support
+21,Hand Gesture Recognition
+22,AI-Powered Personal Finance Advisor
+23,AI-Generated Art System
+24,AI-Powered Hiring System
+25,AI-Powered Resume Generator
+26,Medical Image Analysis
+27,Fake News Detection
+28,Sentiment Analysis
+29,Drowsiness Detection System
+5000,Smart Traffic Management System
+5001,AI-Based Virtual Personal Trainer
+5003,AI-Based Legal Document Summarization
+5005,Smart Surveillance System
+5006,AI-Based Intelligent Tutoring System
+5007,AI-Based Language Translator
+5009,AI-Powered Content Moderation System
+5011,Cyber Threat Intelligence System
+5012,AI-Based Podcast Summarizer
+5015,AI-Powered Mental Health Chatbot
+5016,AI-Powered Wildlife Monitoring
+5017,AI-Powered Music Composition
+5019,AI-Based Crop Disease Prediction
+5020,AI-Based Fake News Detector
+5021,AI-Powered Automated Customer Feedback Analysis
+5023,AI-Based Game Opponent AI
+5025,AI-Powered Virtual Shopping Assistant
+5031,AI-Powered Code Review Assistant
+5032,AI-Based Real-Time Emotion Detection
+5033,AI-Based Credit Score Prediction
+5035,AI-Based Crime Prediction
+5038,AI-Powered Financial Fraud Detection

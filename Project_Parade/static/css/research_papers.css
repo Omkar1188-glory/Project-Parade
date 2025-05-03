@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1.text-center {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #5a67d8;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.upload-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.upload-section h2 {
+    color: #5a67d8;
+}
+
+.upload-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.upload-section input[type="text"], .upload-section input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #48bb78;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.papers-list-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.papers-list-section h2 {
+    color: #5a67d8;
+}
+
+#papers-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#papers-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#papers-list li a {
+    color: #2b6cb0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#papers-list li small {
+    display: block;
+    margin-top: 5px;
+    color: #718096;
+}
+
+/* From Uiverse.io by Jedi-hongbin */ 
+.button {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+   }
+   
+   button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+   
+   button:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+   button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
+
+   .back-button {
+
+    text-decoration: none;
+   }
+
+   .back-button:hover {
+
+    background-color: whitesmoke;
+    padding: 10px 15px;
+    border-radius: 6px;
+   }

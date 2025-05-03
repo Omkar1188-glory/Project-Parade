@@ -1,0 +1,536 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Home Content Styling */
+.home-content {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+/* Navbar */
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #0048ff, #00aaff); /* Blue gradient background */
+    padding: 10px 15px;
+    width: 98vw; /* Full viewport width */
+    height: 30px; /* Adjust as needed for height */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for depth */
+    position: fixed; /* Ensures navbar sticks to top of the screen */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar is above other content */
+}
+
+.navbar .brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .user-icon {
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.navbar .brand h2 {
+    margin: 0;
+    color: white; /* Text color */
+    font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Allow links to fill available space */
+    justify-content: flex-end; /* Align the links to the right */
+    
+}
+
+.nav-links li {
+    margin-right: 30px;
+   
+}
+
+.nav-links li:last-child {
+    margin-right: 0; /* No margin on the last link */
+}
+
+.nav-links a {
+    color: white; /* White text */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Increase padding for better click area */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem; /* Adjust font size */
+    
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background on hover */
+    color: whitesmoke; /* Light color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+
+/* Notification Button Styling */
+.notification-button {
+    position: absolute;
+    top: 60px; /* Adjusted to position below the navbar */
+    right: 530px;
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-button img {
+    width: 24px;
+    height: 24px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    opacity: 1;
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.notification-button img:hover {
+    filter: brightness(0) invert(1); /* Make the icon black on hover */
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.create-post-button, .add-story-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.create-post-button:hover, .add-story-button:hover {
+    background-color: #45a049;
+}
+
+/* Notifications Section */
+.notifications-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.notifications-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.notifications-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notifications-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Stories Section */
+.stories-section {
+    margin-bottom: 40px;
+}
+
+.stories-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stories-container {
+    display: flex;
+    gap: 10px;
+}
+
+.story-card {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%; /* Makes the card circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the card */
+}
+
+.story-label {
+    position: absolute;
+    bottom: -25px; /* Adjust as needed */
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Adds shadow for better readability */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Post Container */
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Post Card */
+.post-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Adjust height based on content */
+    max-width: 800px; /* Set a maximum width for the card */
+}
+
+/* Post Image Container */
+.post-image {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio of 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Post Image */
+.post-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    border-radius: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    width: 80px; /* Smaller profile image size */
+    height: 80px;
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover;
+    margin-right: 8px; /* Reduced space between image and name */
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details h3 {
+    font-size: 14px; /* Smaller font size for the name */
+    color: #333;
+    margin: 0;
+}
+
+.timestamp {
+    font-size: 12px; /* Smaller font size for the timestamp */
+    color: #777;
+}
+
+.post-content {
+    margin-top: 0px;
+    padding: 0px 0px;
+    font-size: 14px; /* Slightly smaller font size for content */
+    color: #555;
+    flex: 1; /* Allows the content section to take remaining space */
+}
+
+/* Post Actions Container */
+.post-actions {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons evenly */
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px; /* Add some padding to ensure spacing */
+}
+
+/* Action Buttons */
+.like-button,
+.comment-button {
+     /* No background color */
+    border: none;
+    color: #000; /* Black color for icons to ensure visibility */
+    cursor: pointer;
+    font-size: 24px; /* Increase font size to make icons larger */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Action Buttons on Hover */
+.like-button:hover,
+.comment-button:hover {
+    color: #007BFF; /* Change color on hover for better visibility */
+}
+
+/* Icon within Buttons */
+.like-button img,
+.comment-button img {
+    width: 24px; /* Size of the icons */
+    height: 24px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    transition: filter 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Icons on Hover */
+.like-button:hover img,
+.comment-button:hover img {
+    filter: brightness(0) invert(1); /* Change icon color on hover */
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure modal is on top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-body {
+    margin-top: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Profile Page Styling */
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+.profile-actions {
+    margin-top: 20px;
+}
+
+.edit-profile-button,
+.save-profile-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.edit-profile-button:hover,
+.save-profile-button:hover {
+    background-color: #0056b3;
+}
+
+/* Trending Projects Section */
+.trending-projects {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trending-projects h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.trending-projects-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.trending-projects-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.trending-projects-item .project-info {
+    flex: 1;
+}
+
+.trending-projects-item .project-title {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.trending-projects-item .project-description {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Resource Links Section */
+.resource-links {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resource-links h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resource-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-links ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.resource-links ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resource-links ul li a:hover {
+    text-decoration: underline;
+}

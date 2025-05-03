@@ -1,0 +1,218 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Set background color to #f9f9f9 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container styles for form */
+.login-register-container {
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Form container */
+.form-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space between form content and image */
+    max-width: 800px !important; /* Ensure the width is applied */
+    width: 100% !important; /* Ensure the width is applied */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 16px 32px rgba(0, 123, 255, 0.6); 
+    border-radius: 10px;
+    text-align: left; /* Align text to the left within the container */
+}
+
+/* Image inside the form container */
+.form-container img {
+    max-width: 320px; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px; /* Space between the image and the form content */
+}
+
+/* Form content styles */
+.form-content {
+    flex: 1; /* Takes up remaining space */
+}
+
+/* Heading styles */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Input group styles */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Label styles */
+label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+    color: #666;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background-color: #fff; /* Ensures label background matches input */
+    padding: 0 5px; /* Space around the label */
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label,
+select:not(:placeholder-shown) + label,
+select:focus + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.75em;
+    color: #007bff;
+}
+
+/* Placeholder styles */
+input::placeholder {
+    color: #999;
+    opacity: 1; /* Ensures placeholder text is visible */
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 120px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.password_error, .username_error {
+    font-weight: bold;
+    color: red;
+}
+
+.input-group {
+    position: relative; /* Necessary for absolute positioning of the icon */
+}
+
+.user-icon {
+    width: 15px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position relative to the input group */
+    right: 70px; /* Adjust spacing from the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+}
+
+.input-group input[type="text"] {
+    padding-left: 10px; /* Adjust padding to shift placeholder to the left */
+    /* Optional: You can also adjust padding-left to suit your design */
+}
+
+.eye-icon {
+    width: 16px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position relative to the input group */
+    right: 66px; /* Adjust spacing from the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+}
+
+.input-group input[type="password"] {
+    padding-right: 10px; /* Adjust padding to shift placeholder to the left */
+}
+
+/* Positioning the back button at the upper-right of the GIF */
+.back-button {
+    position: absolute;
+    top: 215px;  /* Adjust top margin as per your need */
+    right: 1170px; /* Adjust right margin as per your need */
+    background-color: #007bff;
+    border-radius: 5px;
+    border-color: blue;
+    padding: 10px 15px;
+    border: none;
+    color: white; /* Customize the color */
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.back-button svg {
+    fill: white; /* Customize the SVG color */
+    
+}
+
+.back-button:hover  {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+

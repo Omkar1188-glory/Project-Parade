@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Login">
+    <meta name="keywords" content="Login, Authentication">
+    <meta name="author" content="Your Name">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/bg2.jpg') }}'); background-size: cover; background-position: center;">
+    
+    <div class="login-register-container">
+        <div class="form-container login-container">
+            <img src="{{ url_for('static', filename='images/account-protection.png') }}" alt="Login Image">
+    
+            <div class="form-content">
+                <!-- Form elements remain unchanged -->
+                <form action="{{ url_for('login') }}" method="POST">
+                    <h2>Welcome Back Coder</h2>
+                    <h4>Login here</h4>
+                    
+                    <div class="input-group">
+                        <input type="text" id="username" name="username" required placeholder=" " autocomplete="username">
+                        <label for="username">
+                            Username
+                            <img src="{{ url_for('static', filename='images/user.png') }}" alt="User Icon" class="user-icon">
+                        </label>
+                        {% if 'username_error' in get_flashed_messages(with_categories=false) %}
+                            <div class="error-message">{{ get_flashed_messages(with_categories=false)['username_error'] }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" required placeholder=" " autocomplete="current-password">
+                        <label for="password">
+                            Password
+                            <img src="{{ url_for('static', filename='images/padlock.png') }}" alt="Eye Icon" class="eye-icon">
+                        </label>
+                        {% if 'password_error' in get_flashed_messages(with_categories=false) %}
+                            <div class="error-message">{{ get_flashed_messages(with_categories=false)['password_error'] }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="error-message" id="errorMessage" style="display: none;">
+                        <p><b>Invalid Credentials..!<b/></p>                     
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <p>Don't have an account? <a href="{{ url_for('register') }}">Create Account</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

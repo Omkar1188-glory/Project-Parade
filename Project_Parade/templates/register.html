@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Registration">
+    <meta name="keywords" content="Register, Sign Up, Authentication">
+    <meta name="author" content="Your Name">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/bg2.jpg') }}'); background-size: cover; background-position: center;">
+    <div class="login-register-container">
+        <div class="form-container register-container">
+            <img src="{{ url_for('static', filename='images/registered.gif') }}" alt="Register Image">
+            <div class="form-content">
+                <form action="{{ url_for('register') }}" method="POST">
+                    <h2>Create Account</h2>
+                    <div class="flash-messages">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="flash-message {{ category }}">{{ message }}</div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                    </div>                                       
+                    <div class="input-group">
+                        <input type="text" id="username" name="username" placeholder=" " required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder=" " required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder=" " required>
+                        <label for="confirm-password">Confirm Password</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+    
+</body>
+</html>

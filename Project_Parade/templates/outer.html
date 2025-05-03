@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Parade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/outer.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='images/parade2.jpg') }}" alt="Logo" style="width: 60px; height: 50px; margin-right: 10px;">
+                Projects Parade
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-2">
+                        <a href="{{ url_for('login') }}" class="btn btn-primary-soft mb-2">Get Started</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a href="{{ url_for('about') }}" class="btn btn-primary-soft mb-2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary-soft mb-2">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center d-flex align-items-center justify-content-center" 
+    style="height: 30vh; background: url('{{ url_for('static', filename='images/bg2.jpg') }}') no-repeat center center/cover; color: black;">
+    <div class="container">
+        <h1>Welcome to the Projects parade..!!</h1>
+        <p>Explore, Collaborate, and Innovate.</p>
+        </div>
+    </section>
+
+    <section class="projects-section py-5">
+        <div class="container">
+            <!-- Projects Ideas Header -->
+            <p class="text-center projects-header">Innovative Projects Ideas</p>
+
+    <!-- Features/Projects Section -->
+    <section class="projects-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ url_for('static', filename='images/doctor.jpg') }}" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Medical Text Extraction</h5>
+                            <p class="card-text">Medical data extraction and conversion is the process of extracting data which includes demographic, administrative, clinical, and financial from your legacy system and importing it into your new destination system. This process improves risk score accuracy by automating access to clinical records.</p>
+                            <a href="https://nanonets.com/blog/data-extraction-from-medical-documents/" class="btn btn-primary" target="_blank">Learn More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ url_for('static', filename='images/chat.jpg') }}" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Chat Application</h5>
+                            <p class="card-text">Chatting app allows you to communicate with your customers in web chat rooms. It enables you to send and receive messages. Chatting apps make it easier, simpler, and faster to connect with everyone and it is also easy to use. There are many types of chatting apps and every one has its own format, design, and functions..</p>
+                            <a href="https://www.slideshare.net/slideshow/chat-application-full-documentation/75143022#18" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ url_for('static', filename='images/cloud.jpg') }}" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Cloud computing projects</h5>
+                            <p class="card-text">Cloud computing lets client devices access rented computing resources, such as data, analytics and cloud applications over the internet. It relies on a network of remote data centers, servers and storage systems that are owned and operated by cloud service providers..</p>
+                            <a href="https://www.tutorialsduniya.com/cloud-computing-projects/" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ url_for('static', filename='images/big_data.jpg') }}" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Big data</h5>
+                            <p class="card-text">Big data refers to extremely large and diverse collections of structured, unstructured, and semi-structured data that continues to grow exponentially over time. These datasets are so huge and complex in volume, velocity, and variety, that traditional data management systems cannot store, process, and analyze them..</p>
+                            <a href="https://www.datascience-pm.com/documentation-best-practices/" class="btn btn-primary" target="_blank">Learn More</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ url_for('static', filename='images/payment.jpg') }}" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Payment integration</h5>
+                            <p class="card-text">Payment gateway integration is a way for ecommerce companies to smoothly accept digital payments from customers. An online payment gateway ensures fast and secure transfer of a customer's personal and payment information between an ecommerce application and one or several payment processing systems.</p>
+                            <a href="https://www.scnsoft.com/ecommerce/payment-gateway-integration" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ url_for('static', filename='images/search_engine.jpg') }}" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Search engine</h5>
+                            <p class="card-text">A search engine is a software system that provides hyperlinks to web pages and other relevant information on the Web in response to a user's query. The user inputs a query within a web browser or a mobile app, and the search results are often a list of hyperlinks, accompanied by textual summaries and images..</p>
+                            <a href="https://developers.google.com/custom-search/docs/tutorial/creatingcse" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- "See All >" Link Section -->
+    <div class="text-center my-4">
+            <a href="{{ url_for('login') }}" class="btn btn-primary">See All</a>
+        </div>
+        
+    </div>
+        
+    </section> 
+
+
+    <section class="py-5 features-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Features That Fit Every Student</h2>
+            <p class="text-center mb-5">Discover the features designed to enhance your experience, making your academic journey more productive and enjoyable. Our platform offers tailored solutions to meet the diverse needs of students, ensuring you get the most out of your academic endeavors.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4 text-center">
+                    <img src="{{ url_for('static', filename='images/library.jpg') }}" alt="Feature 1" class="img-fluid rounded-circle feature-image mb-2">
+                    <h5>Resource Library</h5>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <img src="{{ url_for('static', filename='images/integrated.jpg') }}" alt="Feature 2" class="img-fluid rounded-circle feature-image mb-2">
+                    <h5>Integrated Project Management</h5>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <img src="{{ url_for('static', filename='images/trend.jpg') }}" alt="Feature 3" class="img-fluid rounded-circle feature-image mb-2">
+                    <h5>Trending Projects</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Section for "Create a poll in no time" -->
+     <section class="py-5 bg-grey">
+        <div class="container">
+            <h2 class="text-center mb-4">Create a Poll in No Time</h2>
+            <p class="text-center mb-5">Polls are quick and easy to build, no matter the complexity or number of options. Responses appear in real-time with dynamic animations!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4 text-center">
+                    <img src="{{ url_for('static', filename='images/doubts.png') }}" alt="Ask Doubts Globally" class="img-fluid mb-3">
+                    <h5>Ask Doubts Globally</h5>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <img src="{{ url_for('static', filename='images/resources.jpg') }}" alt="Add Images as Options" class="img-fluid mb-3">
+                    <h5>Trending Projects and Resources</h5>
+                </div>
+                <div class="col-md-4 mb-4 text-center">
+                    <img src="{{ url_for('static', filename='images/innovative.png') }}" alt="Innovative Visualization" class="img-fluid mb-3">
+                    <h5>Try Innovative Visualizations</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Create Innovative Projects and Upload at one place</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 text-center">
+                    <img src="{{ url_for('static', filename='images/project.jpg') }}" alt="Feature Image" class="img-fluid mb-3">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <aside class="feature-label">
+                        <h5>Discover New Projects</h5>
+                        <p>“Create innovative projects and upload them all in one place. Stay organized and showcase your creativity with ease.”.</p>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Upload and Share Your Research Papers</h2>
+                    <p>Students can upload their research papers here and share them with others. Contribute to the academic community by sharing your findings and accessing valuable research from peers.</p>
+                </div>
+                <div class="col-md-6">
+                    <aside>
+                        <img src="{{ url_for('static', filename='images/research.png') }}" alt="Research Papers" class="img-fluid">
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+ 
+<footer style="background-color: #e0e0e0;" class="text-center py-3 mt-5">
+    <div class="container">
+        <p class="mb-0">© 2024 Shree L R Tiwari College of Engineering. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

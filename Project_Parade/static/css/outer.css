@@ -1,0 +1,291 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #343a40; /* Dark background for hero section */
+}
+
+.hero-section h1,
+.hero-section p {
+    color: white; /* Ensure both heading and paragraph text are white */
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Adjust spacing between heading and paragraph */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px; /* Adjust spacing between paragraph and button */
+}
+
+.hero-section .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+/* Projects Section */
+.projects-section .card {
+    border: none;
+    box-shadow: 0 0 300px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.projects-section .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.projects-header {
+    text-align: left;
+    margin-left: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Card Styling */
+.card {
+    border: none; /* Optional: Remove card border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Create Poll Section */
+.bg-grey {
+    background-color: #f5f5f5; /* Light grey color */
+}
+
+.create-poll-section {
+    padding: 3rem 1rem; /* Adjust padding as needed */
+}
+
+.create-poll-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.create-poll-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.create-poll-section .text-center {
+    text-align: center;
+}
+
+.create-poll-section .img-fluid {
+    width: 150px; /* Fixed width for all images */
+    height: 150px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    margin-bottom: 1rem;
+}
+
+.create-poll-section h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Buttons */
+.btn-primary-soft {
+    background-color: #007bff !important; /* Adjust color as needed */
+    color: #fff !important; /* Text color */
+    border: 1px solid #007bff !important; /* Border color */
+}
+
+.btn-primary-soft:hover {
+    background-color: #0056b3 !important; /* Darker shade on hover */
+    border-color: #0056b3 !important; /* Darker border color on hover */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-back {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+}
+
+/* Form Elements */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Poll History */
+.poll-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.poll-history li {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-history h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.poll-history p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.poll-history small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #6c757d;
+}
+
+/* New Section Styling */
+.feature-label {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.feature-label h5 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.feature-label p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Image Hover Effect */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Section Styling */
+section.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.bg-grey {
+    background-color: #f5f5f5; /* Light grey background */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center img {
+    margin-bottom: 1rem;
+}
+
+/* Features Section Styling */
+.features-section {
+    background-color: #ffffff; /* White background for the section */
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features-section p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    color: #555;
+}
+
+.features-section .feature-image {
+    width: 250px; /* Fixed width for circular images */
+    height: 250px; /* Fixed height for circular images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 50%; /* Circular shape for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    
+}
+
+.features-section .feature-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    
+}
+
+.features-section h5 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+}

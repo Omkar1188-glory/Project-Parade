@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.breadcrumb-item.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.content {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border: 10px solid #e7e7e7;
+    margin-top: 250px;
+}
+
+footer p {
+    margin: 0;
+    color: #007bff;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
