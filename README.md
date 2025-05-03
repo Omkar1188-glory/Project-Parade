@@ -36,20 +36,6 @@
 * Features used: Student marks, interest areas
 * Output: Recommended project domain
 
-  ## 🖼️ Screenshots
-  
-### 🧾 User Dashboard
-![User Dashboard](Screenshot 2025-05-03 212458.png)
-
-### 🔐  Project Prediction Result
-![Login Page](Screenshot 2025-05-03 212559.png)
-
-### 🎯 Project /suggestions
-![Prediction Result](Screenshot 2025-05-03 212621.png)
-
-### 🛠️ Flow Chart For Website
-![Admin Panel](Project_Parade/screenshots/Screenshot 2025-05-03 212735.png)
-
 
 ---
 
