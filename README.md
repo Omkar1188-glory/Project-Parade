@@ -36,6 +36,18 @@
 * Features used: Student marks, interest areas
 * Output: Recommended project domain
 
+## 📌 Project Parade Flow Diagram
+![Flow Diagram](Project_Parade/screenshots/Screenshot 2025-05-03 212458.png)
+
+## 💡 Project Suggestions
+![Project Suggestions](Project_Parade/screenshots/Screenshot 2025-05-03 212559.png)
+
+## 🧭 Dashboard
+![Dashboard](Project_Parade/screenshots/Screenshot 2025-05-03 212621.png)
+
+## 🤖 Predicted Project
+![Predicted Project](Project_Parade/screenshots/Screenshot 2025-05-03 212735.png)
+
 
 ---
 
